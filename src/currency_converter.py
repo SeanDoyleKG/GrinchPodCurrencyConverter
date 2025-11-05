@@ -11,7 +11,10 @@ ACCESS_KEY = (
 
 def fetch_exchange_rate(base: str, target: str) -> float:
     """Docstring to pass pylint"""
-    url = f"http://api.exchangeratesapi.io/v1/latest?access_key={ACCESS_KEY}&symbols={base},{target}"
+    url = (
+        "http://api.exchangeratesapi.io/v1/latest?"
+        + f"access_key={ACCESS_KEY}&symbols={base},{target}"
+    )
     try:
         response = requests.get(url, timeout=10)
         response.raise_for_status()
