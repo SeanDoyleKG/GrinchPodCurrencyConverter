@@ -1,4 +1,5 @@
 """A script to import argparse module."""
+
 import argparse
 
 # Creating an argument parser
