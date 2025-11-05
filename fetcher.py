@@ -6,6 +6,7 @@ import sys
 import requests
 import config
 from logger_config import setup_logging
+import json
 
 ACCESS_KEY = config.ACCESS_KEY  # ACCESS_KEY = "3bd7fcd1f7687b10f1549b23dee79b74"
 logger = setup_logging()
@@ -35,3 +36,13 @@ def fetch_exchange_rate(
         print(f"Invalid target currency '{target}' or no rate available.")
         logger.error(f"Invalid target currency '{target}' or no rate available")
         sys.exit(1)
+
+def mock_fetch_exchange_rate(base_currency: str, target_currency:str) -> float:
+    with open('data/mock_rates.json') as json_data:
+        d = json.load(json_data)
+
+    mock_ers = {}
+    for k, v in d.items():
+        mock_ers[tuple(k.split(","))] = v
+
+    return mock_ers[(base_currency, target_currency)]

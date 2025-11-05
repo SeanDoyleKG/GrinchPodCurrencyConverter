@@ -2,7 +2,7 @@
 
 # pylint: disable = missing-function-docstring
 
-from src.logger_config import setup_logging
+from logger_config import setup_logging
 
 logger = setup_logging()
 

@@ -27,11 +27,8 @@ mock = args.mock
 
 print(
     f"{base_currency} will be converted to {target_currency}"
-    + f"for the amount of {amount} {base_currency}."
+    + f" for the amount of {amount} {base_currency}."
 )  # This should print out: USD is converted to EUR for the amount of 100 USD.
-print(type(amount))
-print(type(base_currency))
-print(type(target_currency))
 
 
 # to_do: log when people pass in the wrong arguments for amount (e.g., a string instead of a number)
