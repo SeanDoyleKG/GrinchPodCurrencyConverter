@@ -15,7 +15,7 @@
 #     assert get_basic() == 1
 #     assert get_basic() == 1
 
-
+import pytest
 from src.converter import converter
 
 def test_converter_positive():
@@ -48,14 +48,12 @@ def test_converter_rounding():
     #assert
     assert actual_output == expected_output
 
-# def test_converter_negative():
-#     #arrange 
-#     amount = -100
-#     rate = 1.20 #chnage this later to use mock_rates
-#     expected_output = raise ValueError('Amount must be positive')
-#     #act
-#     actual_output = converter(amount, rate)
-#     #assert
-#     assert actual_output == expected_output
-
+def test_converter_negative():
+    with pytest.raises(ValueError):
+        amount = -100
+        rate = 1.20
+        #act
+        actual_output = converter(amount, rate)
+        #assert
+        assert actual_output == expected_output
 
