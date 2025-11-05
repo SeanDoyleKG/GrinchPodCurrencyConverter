@@ -1,4 +1,6 @@
-from logger_config import setup_logging
+"""docstring to pass pylint"""
+
+from src.logger_config import setup_logging
 
 logger = setup_logging()
 
@@ -9,6 +11,6 @@ def converter(amount: float, rate: float) -> float:
         raise ValueError("Amount must be positive")
     if amount == 0:
         logger.warning("a value of zero has been entered")
-    else:
-        return round(amount * rate, 2)
+        return 0.00
+    return round(amount * rate, 2)
     # rounding to 2dp because its a currency
