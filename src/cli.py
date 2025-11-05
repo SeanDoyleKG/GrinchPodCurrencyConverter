@@ -26,21 +26,22 @@ mock = args.mock
 
 
 print(
-    f"{base_currency} will be converted to {target_currency} for the amount of {amount} {base_currency}."
+    f"{base_currency} will be converted to {target_currency}"
+    + f"for the amount of {amount} {base_currency}."
 )  # This should print out: USD is converted to EUR for the amount of 100 USD.
 print(type(amount))
 print(type(base_currency))
 print(type(target_currency))
 
 
-# TODO: log when people pass in the wrong arguments for amount (e.g., a string instead of a number)
+# to_do: log when people pass in the wrong arguments for amount (e.g., a string instead of a number)
 
 
 def command_line_arguments_for_currency_conversion():
     """Get currency conversion command line arguments from user.
 
-    This function returns first the base currency, then the target currency, then the amount, and then
-    whether they wish to use the mock amount.
+    This function returns first the base currency, then the target currency,
+    then the amount, and then whether they wish to use the mock amount.
 
     """
     return base_currency, target_currency, amount, mock
