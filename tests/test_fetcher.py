@@ -1,5 +1,5 @@
 """Test fetcher script (src/fetcher.py)"""
-
+# pylint: disable=import-error
 from src import fetcher
 
 
