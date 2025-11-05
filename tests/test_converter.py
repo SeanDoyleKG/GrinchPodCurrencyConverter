@@ -18,40 +18,43 @@
 import pytest
 from src.converter import converter
 
+
 def test_converter_positive():
-    #arrange 
+    # arrange
     amount = 100
-    rate = 1.2 #chnage this later to use mock_rates
+    rate = 1.2  # chnage this later to use mock_rates
     expected_output = 120.00
-    #act
+    # act
     actual_output = converter(amount, rate)
-    #assert
+    # assert
     assert actual_output == expected_output
+
 
 def test_converter_zero_amount():
-    #arrange 
+    # arrange
     amount = 0
-    rate = 1.2 #chnage this later to use mock_rates
+    rate = 1.2  # chnage this later to use mock_rates
     expected_output = 0.00
-    #act
+    # act
     actual_output = converter(amount, rate)
-    #assert
+    # assert
     assert actual_output == expected_output
 
+
 def test_converter_rounding():
-    #arrange 
+    # arrange
     amount = 100
-    rate = 1.222222222 #chnage this later to use mock_rates
+    rate = 1.222222222  # chnage this later to use mock_rates
     expected_output = 122.22
-    #act
+    # act
     actual_output = converter(amount, rate)
-    #assert
+    # assert
     assert actual_output == expected_output
+
 
 def test_converter_negative():
     amount = -100
     rate = 1.20
-    #act
+    # act
     with pytest.raises(ValueError):
-        converter(amount,rate)
-
+        converter(amount, rate)
