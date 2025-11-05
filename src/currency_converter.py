@@ -1,4 +1,5 @@
 """Docstring to pass pylint"""
+
 import sys
 import requests
 
@@ -7,11 +8,10 @@ ACCESS_KEY = (
     "6c6a0af04670dae9753d4bb4e945b792"  # Should the Access Key be stored this way?
 )
 
+
 def fetch_exchange_rate(base: str, target: str) -> float:
-    """Docstring to pass pylint"""    
-    url = (
-        f"http://api.exchangeratesapi.io/v1/latest?access_key={ACCESS_KEY}&symbols={base},{target}"
-    )
+    """Docstring to pass pylint"""
+    url = f"http://api.exchangeratesapi.io/v1/latest?access_key={ACCESS_KEY}&symbols={base},{target}"
     try:
         response = requests.get(url, timeout=10)
         response.raise_for_status()
