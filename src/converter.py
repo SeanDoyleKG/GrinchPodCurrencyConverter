@@ -1,8 +1,14 @@
+from logger_config import setup_logging
+ 
+logger = setup_logging()
+
 
 def converter(amount: float, rate: float) -> float:
     if amount < 0:
-        #log error here('a neagtive amount has been entered')
+        logger.error('a negative amount has been entered')
         raise ValueError('Amount must be positive')
+    if amount == 0:
+        logger.warning('a value of zero has been entered')
     else:
         return round(amount * rate, 2)
     #rounding to 2dp because its a currency
