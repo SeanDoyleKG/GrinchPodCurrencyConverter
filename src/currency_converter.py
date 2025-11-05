@@ -2,11 +2,10 @@
 
 import sys
 import requests
+from src import config
 
 
-ACCESS_KEY = (
-    "6c6a0af04670dae9753d4bb4e945b792"  # Should the Access Key be stored this way?
-)
+ACCESS_KEY = config.ACCESS_KEY
 
 
 def fetch_exchange_rate(base: str, target: str) -> float:
