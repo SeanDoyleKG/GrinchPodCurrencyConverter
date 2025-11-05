@@ -1,5 +1,7 @@
 """This code will fetch exchange rates using an API"""
 
+# pylint: disable=import-error
+
 import sys
 import requests
 import config
