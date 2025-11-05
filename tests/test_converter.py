@@ -49,11 +49,9 @@ def test_converter_rounding():
     assert actual_output == expected_output
 
 def test_converter_negative():
+    amount = -100
+    rate = 1.20
+    #act
     with pytest.raises(ValueError):
-        amount = -100
-        rate = 1.20
-        #act
-        actual_output = converter(amount, rate)
-        #assert
-        assert actual_output == expected_output
+        converter(amount,rate)
 
