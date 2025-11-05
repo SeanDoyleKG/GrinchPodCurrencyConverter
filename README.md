@@ -49,3 +49,6 @@ Please note this is just a suggested structure, if you wish to organise the code
 ## Getting Set Up
 
 You will need to sign up to get a free API key at https://exchangeratesapi.io/ using the option on the top right of the page. Please then assign the ACCESS KEY variable found in `currency_converter.py` to be equal to access key given after the sign up.
+
+
+CHANGE
