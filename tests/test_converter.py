@@ -1,6 +1,6 @@
 """Docstring to pass pylint"""
 
-# pylint: disable=missing-function-docstring,too-many-positional-arguments,too-many-arguments,comparison-with-itself,comparison-of-constants
+# pylint: disable=comparison-with-itself,comparison-of-constants
 
 from src.main import get_basic
 
