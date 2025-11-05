@@ -1,4 +1,4 @@
-from converter import convert
+from src.converter import convert
 
 def test_convert():
     assert convert(100, 0.5) == 50
